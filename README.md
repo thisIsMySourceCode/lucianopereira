@@ -1,2 +1,3 @@
-﻿# Luciano Pereira
- ## Resume 
+---
+permalink: /index.html
+---
