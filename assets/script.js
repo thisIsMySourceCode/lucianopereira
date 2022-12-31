@@ -95,6 +95,7 @@ class Josh {
       this.addCss(this.initDom);
     }
     intersectionObserverCallback(entries, observer) {
+      const notMobile = !this.animateInMobile && this.isMobile();
       entries.forEach((entry) => {
         const targetElm = entry.target;
         const name = targetElm.dataset.joshAnimName, 
@@ -109,7 +110,9 @@ class Josh {
             animation-iteration-count: ${iteration};
             animation-delay: ${delay};
           `;
+          if (!notMobile) {
             targetElm.style = targetElm.style.cssText + styles;
+          }
           observer.unobserve(targetElm);
         }
       });
@@ -124,7 +127,11 @@ class Josh {
       }
     }
     cssUtil(targetNode) {
+      const notMobile = !this.animateInMobile && this.isMobile();
       targetNode.classList.add(this.animClass);
+      if (!notMobile) {
+        targetNode.style = targetNode.style.cssText + "visibility: hidden";
+      }
     }
     intersectOnScroll(domElement) {
       if ("IntersectionObserver" in window) {
@@ -170,6 +177,11 @@ class Josh {
           domChangeObserver.observe(document.body, config);
         }
       });
+    }
+    isMobile() {
+      return /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
     }
   }
   const josh = new Josh()
