@@ -90,12 +90,12 @@ class Josh {
           : options.animateInMobile;
       this.onDOMChange =
         typeof options.onDOMChange === "undefined" ? false : options.onDOMChange;
-      this.intersectOnScroll(this.initDom);
-      this.callOnDOMChange();
 
       try
 {
-      this.addCss(this.initDom);
+  this.intersectOnScroll(this.initDom);
+  this.callOnDOMChange();
+  this.addCss(this.initDom);
 } catch (e){}
 
 
