@@ -60,6 +60,18 @@ window.onscroll = function ()
     } 
 }
 
+const timelines = document.getElementsByClassName('timelineUl')
+for ( let timeline of timelines ) {
+      let 
+      time = timeline.getElementsByClassName('time'),
+       num = 0
+       for (e of time) {
+        num++
+        e.classList.add('josh-js') 
+        e.dataset.joshAnimName = (num % 2) ? 'fadeInRight' : 'fadeInLeft'
+      }   
+}
+
 class Josh {
     constructor(options = {}) {
       this.initClass = options.initClass || "josh-js";
