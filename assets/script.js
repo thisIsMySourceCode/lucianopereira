@@ -90,15 +90,9 @@ class Josh {
           : options.animateInMobile;
       this.onDOMChange =
         typeof options.onDOMChange === "undefined" ? false : options.onDOMChange;
-
-      try
-{
-  this.intersectOnScroll(this.initDom);
-  this.callOnDOMChange();
-  this.addCss(this.initDom);
-} catch (e){}
-
-
+      this.intersectOnScroll(this.initDom);
+      this.callOnDOMChange();
+      this.addCss(this.initDom);
     }
     intersectionObserverCallback(entries, observer) {
       const notMobile = !this.animateInMobile && this.isMobile();
@@ -190,4 +184,6 @@ class Josh {
       );
     }
   }
+try {
   const josh = new Josh();
+} catch(e){}
