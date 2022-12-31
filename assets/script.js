@@ -60,16 +60,22 @@ window.onscroll = function ()
     } 
 }
 
+
+const addAnimation = (c, even, odd) => {
+  let num = 0
+  for (el of c) {
+    num++
+    el.classList.add('josh-js') 
+    el.dataset.joshAnimName = (num % 2) ? even : odd
+  }   
+}
+
 const timelines = document.getElementsByClassName('timelineUl')
 for ( let timeline of timelines ) {
-      let 
-      time = timeline.getElementsByClassName('time'),
-       num = 0
-       for (e of time) {
-        num++
-        e.classList.add('josh-js') 
-        e.dataset.joshAnimName = (num % 2) ? 'fadeInRight' : 'fadeInLeft'
-      }   
+      let time = timeline.getElementsByClassName('time'),
+       content = timeline.getElementsByClassName('content')
+      addAnimation(time   , 'fadeInRight', 'fadeInLeft' )
+      addAnimation(content, 'fadeInLeft' , 'fadeInRight')
 }
 
 class Josh {
