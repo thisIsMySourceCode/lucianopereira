@@ -1,3 +1,4 @@
+console.warn = () => {}
 const 
          log = console.log,
 toggleSwitch = document.getElementById('dark'),
@@ -184,6 +185,4 @@ class Josh {
       );
     }
   }
-try {
-  const josh = new Josh();
-} catch(e){}
+  const josh = new Josh()
