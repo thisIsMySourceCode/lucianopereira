@@ -1,37 +1,34 @@
 @charset "UTF-8";
-
-:root {
-           --bg: #141922   ;
-           --fg: #F7F8FF   ;
-		   --c1: #222834   ;
-		   --c2: #81899C   ;
-		   --c3: #55B2E6   ;
-		   --c4: #1a202c   ;
-} [data-theme="light"]       {
-	        --bg: #F7F8FF  ;
-	        --fg: #141922  ;
-			--c1: #4A90E2  ;
-			--c2: #141922  ;
-			--c3: #1A60b2  ;
-			--c4: #dcdbde  ;
-} @font-face {
-        font-family: 'Mona Sans';
-                src:
-                    url('Mona-Sans.woff2') format('woff2 supports variations'),
-                    url('Mona-Sans.woff2') format('woff2-variations');
-        font-weight: 200 900     ;
-       font-stretch: 75% 125%    ;
+:root                  {
+                   --bg: #141922  ;
+                   --fg: #F7F8FF  ;
+		           --c1: #222834  ;
+		           --c2: #81899C  ;
+		           --c3: #55B2E6  ;
+		           --c4: #1a202c  ;
+} [data-theme="light"] {
+	               --bg: #F7F8FF  ;
+	               --fg: #141922  ;
+			       --c1: #4A90E2  ;
+			       --c2: #141922  ;
+			       --c3: #1A60b2  ;
+			       --c4: #dcdbde  ;
+} @font-face           {
+            font-family: 'Mona Sans';
+                    src:
+                         url('Mona-Sans.woff2') format('woff2 supports variations'),
+                         url('Mona-Sans.woff2') format('woff2-variations');
+            font-weight: 200 900    ;
+           font-stretch: 75% 125%   ;
 } html,body {
-            font-family: 'Mona Sans' ,'Segoe UI', arial, ubuntu, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif; 
-       background-color: var(--bg)   ;
-                  color: var(--fg)   ;
+            font-family: 'Mona Sans', 'Segoe UI', arial, ubuntu, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif; 
+       background-color: var(--bg)  ;
+                  color: var(--fg)  ;
         text-rendering : optimizeLegibility;
 -webkit-font-smoothing : antialiased;
         scroll-behavior: smooth;
              overflow-x: hidden;
-}
-
-*::-webkit-scrollbar
+} *::-webkit-scrollbar
 		{	width: 12px;
 		}	*::-webkit-scrollbar-track
 		{	background: var(--bg);
@@ -39,18 +36,15 @@
 		{	background-color: var(--c1);
 			border-radius: 20px;
 			border: 3px solid var(--bg);	
-		}
-
-body {
-	         margin: 0 auto;
-	          width: 80ch;
-          max-width: 90%;
-          font-size: 1.33rem;
-        line-height: calc(1ex / 0.35);
-        user-select: none;
-   -moz-user-select: none;
--webkit-user-select: none;
-    -ms-user-select: none;
+		} body { margin: 0 auto;
+	              width: 80ch;
+              max-width: 90%;
+              font-size: 1.33rem;
+            line-height: calc(1ex / 0.35);
+            user-select: none;
+       -moz-user-select: none;
+    -webkit-user-select: none;
+        -ms-user-select: none;
 }
 
 a { text-decoration: none; text-transform: none }
@@ -114,9 +108,6 @@ footer{
 	.row{flex-direction:row;margin-left:-1.0rem;width:calc(100% + 2.0rem)}
     .row .column,.row .wide_column{margin-bottom:inherit;padding:0 1.0rem}
 	.skills .wide_column + .column {margin-top:0}
-
-
-
 	.skills .wide_column h4 {
 
 		margin-top: 1.15rem;
@@ -130,7 +121,6 @@ footer{
 		top:1.5rem;
 		left:1rem;
 	}
-
 	.skills .wide_column h5 { margin-left:8.4rem}
 	footer{text-align:right;padding-left:0}
 	footer span {display: inline;}
@@ -351,41 +341,31 @@ vertical-align: middle;
             height: 2px;
         background: var(--c2);
 } .timeline p
-{ font-size-adjust: 2;
-	         width: 40ch;
-	    text-align: justify;
-	     max-width: 100%;
-	  word-spacing: -.015vw;
-   text-align-last: left;
-	   text-indent: 2.5vw;
-	  text-justify: auto;
-
-        hyphens: auto;
--webkit-hyphens: auto;
--webkit-hyphenate-limit-before: 3;
--webkit-hyphenate-limit-after: 3;
--webkit-hyphenate-limit-chars: 6 3 3;
--webkit-hyphenate-limit-lines: 2;
--webkit-hyphenate-limit-last: always;
--webkit-hyphenate-limit-zone: 8%;
-
--moz-hyphens: auto;
--moz-hyphenate-limit-chars: 6 3 3;
--moz-hyphenate-limit-lines: 2;
--moz-hyphenate-limit-last: always;
--moz-hyphenate-limit-zone: 8%;
-
--ms-hyphens: auto;
--ms-hyphenate-limit-chars: 6 3 3;
--ms-hyphenate-limit-lines: 2;
--ms-hyphenate-limit-last: always;
--ms-hyphenate-limit-zone: 8%;
+{ 	                    width: 40ch;
+	               text-align: justify;
+	                max-width: 100%;
+	             word-spacing: -.015vw;
+              text-align-last: left;
+	              text-indent: 2.5vw;
+	             text-justify: auto;
+	                  hyphens: auto;
+                  -ms-hyphens: auto;
+   	             -moz-hyphens: auto;
+              -webkit-hyphens: auto;
+     -ms-hyphenate-limit-zone: 8%;
+    -moz-hyphenate-limit-zone: 8%;
+ -webkit-hyphenate-limit-zone: 8%;
+    -ms-hyphenate-limit-chars: 6 3 2;
+   -moz-hyphenate-limit-chars: 6 3 2;
+-webkit-hyphenate-limit-chars: 6 3 2;
+    -ms-hyphenate-limit-lines: 3;
+   -moz-hyphenate-limit-lines: 3;
+-webkit-hyphenate-limit-lines: 3;
 } .timeline ul li:nth-child(odd ) p
-{
-   text-align-last: right;
+{  text-align-last: right;
 } @media(max-width:1000px)
 {  .timeline {
-	         width: 100%;
+        width: 100%;
    }
 } @media(max-width:867px)
 {    .timeline {
