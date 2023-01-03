@@ -1,17 +1,17 @@
 @charset "UTF-8";
 :root                  {
                    --bg: #141922  ;
-                   --fg: #F7F8FF  ;
+                   --fg: #f5f6fa  ;
 		           --c1: #222834  ;
 		           --c2: #81899C  ;
 		           --c3: #55B2E6  ;
 		           --c4: #1a202c  ;
 } [data-theme="light"] {
-	               --bg: #F7F8FF  ;
+	               --bg: #f5f6fa  ;
 	               --fg: #141922  ;
 			       --c1: #4A90E2  ;
 			       --c2: #141922  ;
-			       --c3: #1A60b2  ;
+			       --c3: #364ab2  ;
 			       --c4: #dcdbde  ;
 } @font-face           {
             font-family: 'Mona Sans';
